@@ -1,0 +1,20 @@
+[
+  {
+    "id": "1",
+    "onboardingImage": "https://dev.smartlyup.com/assets/images/onboarding/onboarding1.png",
+    "onboardingTitle": "Create your own Game",
+    "onboardingDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vel adipiscing elit egestas non turpis lectus fringilla vel eu pharetra, aldus non."
+  },
+  {
+    "id": "2",
+    "onboardingImage": "https://dev.smartlyup.com/assets/images/onboarding/onboarding2.png",
+    "onboardingTitle": "Compete with your Friends",
+    "onboardingDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vel adipiscing elit egestas non turpis lectus fringilla vel eu pharetra, aldus non."
+  },
+  {
+    "id": "3",
+    "onboardingImage": "https://dev.smartlyup.com/assets/images/onboarding/onboarding3.png",
+    "onboardingTitle": "Watch Leaderboard",
+    "onboardingDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vel adipiscing elit egestas non turpis lectus fringilla vel eu pharetra, aldus non."
+  }
+]

@@ -1,0 +1,13 @@
+domain: test.com
+http:
+  host: 'localhost'
+  port: 80
+
+db:
+  postgres:
+    url: 'localhost'
+    port: 5432
+    database: 'yaml-db'
+
+  sqlite:
+    database: 'sqlite.db'

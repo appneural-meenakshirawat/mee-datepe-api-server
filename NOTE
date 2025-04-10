@@ -1,0 +1,28 @@
+REGISTER:
+/api/v1/auth/register/mobile-no [POST]
+/api/v1/auth/verify-otp [GET]
+/api/v1/me/user-data [GET/POST]
+
+PREFERANCES:
+/api/v1/me/name [GET/POST]
+/api/v1/me/dob[GET/POST]
+/api/v1/me/pronounces [GET/POST]
+/api/v1/me/sexual-preference [GET/POST]
+/api/v1/me/sexual-orientation [GET/POST]
+/api/v1/me/looking-for [GET/POST]
+/api/v1/me/photos [GET/POST]
+/api/v1/me/location [GET]
+
+MATCHES:
+/api/v1/matches/{user} [GET]
+/api/v1/matches [GET]
+/api/v1/matches/{user}/unmatch [POST]
+
+CHATS:
+/api/v1/chats [GET]
+/api/v1/chats/{chat-id} [GET/POST]
+
+SETTINGS:
+/api/v1/me/settings [CRUD]
+/api/v1/me/settings/user [GET/POST]
+/api/v1/me/settings/chat [GET/POST]

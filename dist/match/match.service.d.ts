@@ -1,0 +1,30 @@
+import { ChatRoom } from "./../chats/interface/chatRoom.interface";
+import { Model } from "mongoose";
+import { IUserPreference } from "src/me/schemas/me-preferences.schema";
+import { UserRegisterDto } from "src/register/dto/create-register.dto";
+import { IUserRegister } from "src/register/schemas/user-registered.schema";
+import { IMatchDocument } from "./schemas/user-matches.schema";
+import { IWishListDocument } from "./schemas/user-wishlist.schema";
+import { MeService } from "src/me/me.service";
+import { NotificationService } from "src/notification/notification.service";
+export declare class MatchService {
+    private readonly myPreferencesModel;
+    private readonly userRegistrationModel;
+    private readonly wishlistModel;
+    private readonly matchModel;
+    private readonly chatRoomModel;
+    private meService;
+    private notificationService;
+    constructor(myPreferencesModel: Model<IUserPreference>, userRegistrationModel: Model<IUserRegister>, wishlistModel: Model<IWishListDocument>, matchModel: Model<IMatchDocument>, chatRoomModel: Model<ChatRoom>, meService: MeService, notificationService: NotificationService);
+    nearbyMatches(userId: string, maxDistance: number): Promise<any>;
+    nearbyFind(userId: string, query: any, maxDistance: number): Promise<any>;
+    nearbyFindAny(count: number, userId: string, query: any, maxDistance: number): Promise<any>;
+    findMatchPreferences(mobileNo: string): Promise<any>;
+    findNearbyMatchesWithPreferences(userId: string, maxDistance: number): Promise<any>;
+    findNearestUnmatchedUser(userId: string, maxDistance: number): Promise<any>;
+    findNearbyMatchedUser(userId: string, matchedUserId: string, maxDistance: number): Promise<UserRegisterDto[]>;
+    createWish(userId: string, findUserId: string): Promise<any>;
+    isMatched(userId: string, findUserId: string): Promise<any>;
+    createUnMatch(userId: string, findUserId: string): Promise<any>;
+    reportUser(userId: string, findUserId: string): Promise<any>;
+}

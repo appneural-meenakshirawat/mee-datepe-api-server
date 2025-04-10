@@ -1,0 +1,55 @@
+version: '3.9'
+
+services:
+  nestjs-date:
+    container_name: datepe-api-server
+    build: .
+    ports:
+      - 5000:3000
+    volumes:
+      - .:/usr/src/app
+    depends_on:
+      - mongo_db
+      - rabbitmq
+
+
+    
+    networks:
+      - microservices-network
+  mongo_db:
+    container_name: db_container
+    image: mongo:latest
+    restart: always
+    ports:
+      - 27019:27017
+    volumes:
+
+      - mongo_db:/data/db
+    
+
+    networks:
+      - microservices-network
+
+  rabbitmq:
+    image: rabbitmq:management
+    container_name: rabbitmq
+    restart: always
+
+    ports:
+      - '5673:5672'  # RabbitMQ
+      - '15673:15672'  # Management UI
+    networks:
+      - microservices-network
+
+
+
+
+networks:
+    microservices-network:
+          driver: bridge
+
+
+volumes:
+    mongo_db: {}
+
+
